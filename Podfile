@@ -7,5 +7,6 @@ target 'Movie' do
 
   pod 'SwiftLint'
   pod 'SwiftGen'
+  pod 'gooey-cell'
 
 end

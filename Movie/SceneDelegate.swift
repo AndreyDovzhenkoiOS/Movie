@@ -19,7 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow()
         window?.windowScene = windowScene
 
-        let rootViewController = ListPopularMoviesViewController()
+        let presenter = ListPopularMoviesPresenter()
+        let rootViewController = ListPopularMoviesViewController(presenter: presenter)
         let navigationController = UINavigationController(rootViewController: rootViewController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

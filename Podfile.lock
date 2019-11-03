@@ -1,20 +1,28 @@
 PODS:
+  - gooey-cell (0.1.0):
+    - pop (~> 1.0)
+  - pop (1.0.12)
   - SwiftGen (6.1.0)
   - SwiftLint (0.31.0)
 
 DEPENDENCIES:
+  - gooey-cell
   - SwiftGen
   - SwiftLint
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - gooey-cell
+    - pop
     - SwiftGen
     - SwiftLint
 
 SPEC CHECKSUMS:
+  gooey-cell: ed8d8fa67b57dfca89e655faf8c30ac5fd71c46d
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
 
-PODFILE CHECKSUM: d967b743d90e22990e08452dba9cd69c4c4672bc
+PODFILE CHECKSUM: a4891bfe3c404f6581a3a48b8fbdae61c142c422
 
 COCOAPODS: 1.6.1

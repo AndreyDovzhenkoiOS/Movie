@@ -20,9 +20,21 @@ final class ListPopularMoviesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
-        view.backgroundColor = #colorLiteral(red: 0.2078431373, green: 0.2549019608, blue: 0.3803921569, alpha: 1)
-        configureTableView()
+        view.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.1215686275, blue: 0.1450980392, alpha: 1)
         configurePullToRefresh()
+        configureTableView()
+    }
+
+    let presenter: ListPopularMoviesPresenter
+
+    init(presenter: ListPopularMoviesPresenter) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+        self.presenter.delegate = self
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     private func configureTableView() {
@@ -34,7 +46,7 @@ final class ListPopularMoviesViewController: UIViewController {
     }
 
     private func configurePullToRefresh() {
-        tableView.addParticlePullToRefresh(color: #colorLiteral(red: 0.3803921569, green: 0.8117647059, blue: 0.6078431373, alpha: 1)) { [weak self] in
+        tableView.addParticlePullToRefresh(color: #colorLiteral(red: 0.4274509804, green: 0.8266684322, blue: 1, alpha: 1)) { [weak self] in
             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                 self?.tableView.particlePullToRefresh?.endRefreshing()
             }
@@ -58,4 +70,8 @@ extension ListPopularMoviesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
     }
+}
+
+extension ListPopularMoviesViewController: ListPopularMoviesPresenterDelegate {
+
 }
