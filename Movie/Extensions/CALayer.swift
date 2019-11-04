@@ -11,7 +11,7 @@ import UIKit
 extension CALayer {
     func setupShadow(radius: CGFloat, opacity: Float, height: CGFloat) {
         shouldRasterize = true
-        masksToBounds = false
+        //masksToBounds = false
         shadowRadius = radius
         shadowOpacity = opacity
         rasterizationScale = UIScreen.main.scale

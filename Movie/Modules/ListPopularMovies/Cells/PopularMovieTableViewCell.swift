@@ -8,26 +8,57 @@
 
 import UIKit
 
-final class PopularMovieTableViewCell: UITableViewCell {
+final class PopularMovieTableViewCell: ParentTableViewCell {
+
+    private let ratingView = RatingView().thenUI {
+        $0.backgroundColor = .clear
+        $0.layer.cornerRadius = 25
+        $0.layer.borderColor = UIColor.white.cgColor
+        $0.layer.borderWidth = 1
+    }
 
     private let containerView = UIView().thenUI {
-        $0.backgroundColor = #colorLiteral(red: 0.2666666667, green: 0.3176470588, blue: 0.462745098, alpha: 1)
-        $0.layer.cornerRadius = 15
+        $0.layer.setupShadow(radius: 18, opacity: 0.8, height: 18)
+    }
+
+    private let iconImageView = LoadingImageView(frame: .zero).thenUI {
+        $0.clipsToBounds = true
+        $0.layer.cornerRadius = 25
+        $0.contentMode = .scaleAspectFill
     }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        backgroundColor = .clear
-        selectionStyle = .none
         configureContainerView()
+        configureIconImageView()
+        configureRatingView()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
 
+    func configure(with movie: Movie?) {
+        guard let posterPath = movie?.posterPath,
+            let url = URL(string: URLConfiguration.mediaBackdropPath + posterPath) else {
+                return
+        }
+        iconImageView.loadImage(url)
+        ratingView.configure(with: movie?.voteAverage ?? 0)
+    }
+
     private func configureContainerView() {
         addSubview(containerView)
-        containerView.left(12).right(12).top(10).bottom()
+        containerView.left(30).right(30).top(12).bottom(8)
+    }
+
+    private func configureIconImageView() {
+        containerView.addSubview(iconImageView)
+        iconImageView.pin()
+    }
+
+    private func configureRatingView() {
+        containerView.addSubview(ratingView)
+        ratingView.left(20).top(16).height(50).aspectRatio()
     }
 }

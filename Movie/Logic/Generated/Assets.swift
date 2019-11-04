@@ -18,6 +18,12 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
+  internal static let blackOpacity = ColorAsset(name: "blackOpacity")
+  internal static let darkGreen = ColorAsset(name: "darkGreen")
+  internal static let lightGreen = ColorAsset(name: "lightGreen")
+  internal static let mediumGreen = ColorAsset(name: "mediumGreen")
+  internal static let mediumGreenOpacity = ColorAsset(name: "mediumGreenOpacity")
+  internal static let white = ColorAsset(name: "white")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

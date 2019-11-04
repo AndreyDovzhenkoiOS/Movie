@@ -19,7 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow()
         window?.windowScene = windowScene
 
-        let presenter = ListPopularMoviesPresenter()
+        let service = NetworkService(provider: RequestProvider())
+        let presenter = ListPopularMoviesPresenter(service: service)
         let rootViewController = ListPopularMoviesViewController(presenter: presenter)
         let navigationController = UINavigationController(rootViewController: rootViewController)
         window?.rootViewController = navigationController
