@@ -9,12 +9,12 @@
 import UIKit
 
 struct Movie: Codable {
-    var id: Int?
-    var title: String?
-    var releaseDate: String?
-    var overview: String?
-    var voteAverage: CGFloat?
-    var posterPath: String?
+    let id: Int?
+    let title: String?
+    let releaseDate: String?
+    let overview: String?
+    let voteAverage: CGFloat?
+    let posterPath: String?
 
     enum CodingKeys: String, CodingKey {
         case id

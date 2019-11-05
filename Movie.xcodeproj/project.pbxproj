@@ -31,6 +31,9 @@
 		8A151672236CA5E900301978 /* UIScrollView+ParticlePullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A151671236CA5E900301978 /* UIScrollView+ParticlePullToRefresh.swift */; };
 		8A151674236CA62F00301978 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A151673236CA62F00301978 /* LoadingView.swift */; };
 		8A151678236CAE8400301978 /* PopularMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A151677236CAE8400301978 /* PopularMovieTableViewCell.swift */; };
+		8A4771EA2371C78D003D8F02 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4771E92371C78D003D8F02 /* AuthorizationViewController.swift */; };
+		8A4771EC2371C7A5003D8F02 /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4771EB2371C7A5003D8F02 /* AuthorizationViewModel.swift */; };
+		8A4771EF2371C7D9003D8F02 /* AuthorizationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4771EE2371C7D9003D8F02 /* AuthorizationTableViewCell.swift */; };
 		8A87735A236F4A480090AE0B /* ListPopularMoviesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A877359236F4A480090AE0B /* ListPopularMoviesPresenter.swift */; };
 		8A87735C236F4D5A0090AE0B /* RequestTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A87735B236F4D5A0090AE0B /* RequestTarget.swift */; };
 		8A87735E236F4D7B0090AE0B /* ReuqestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A87735D236F4D7B0090AE0B /* ReuqestProvider.swift */; };
@@ -76,6 +79,9 @@
 		8A151671236CA5E900301978 /* UIScrollView+ParticlePullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ParticlePullToRefresh.swift"; sourceTree = "<group>"; };
 		8A151673236CA62F00301978 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		8A151677236CAE8400301978 /* PopularMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieTableViewCell.swift; sourceTree = "<group>"; };
+		8A4771E92371C78D003D8F02 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		8A4771EB2371C7A5003D8F02 /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
+		8A4771EE2371C7D9003D8F02 /* AuthorizationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationTableViewCell.swift; sourceTree = "<group>"; };
 		8A877359236F4A480090AE0B /* ListPopularMoviesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPopularMoviesPresenter.swift; sourceTree = "<group>"; };
 		8A87735B236F4D5A0090AE0B /* RequestTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTarget.swift; sourceTree = "<group>"; };
 		8A87735D236F4D7B0090AE0B /* ReuqestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuqestProvider.swift; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 		8A15164F236CA1BC00301978 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8A4771E82371C75F003D8F02 /* Authorization */,
 				8A151667236CA4A500301978 /* ListPopularMovies */,
 				8AC31C34237038B40038AF13 /* Parents */,
 			);
@@ -292,6 +299,24 @@
 			isa = PBXGroup;
 			children = (
 				8A151677236CAE8400301978 /* PopularMovieTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8A4771E82371C75F003D8F02 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				8A4771EB2371C7A5003D8F02 /* AuthorizationViewModel.swift */,
+				8A4771E92371C78D003D8F02 /* AuthorizationViewController.swift */,
+				8A4771ED2371C7C1003D8F02 /* Cells */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		8A4771ED2371C7C1003D8F02 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8A4771EE2371C7D9003D8F02 /* AuthorizationTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -489,6 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A4771EA2371C78D003D8F02 /* AuthorizationViewController.swift in Sources */,
 				8A151664236CA41800301978 /* UIView.swift in Sources */,
 				8A151666236CA45B00301978 /* UIFont.swift in Sources */,
 				8A151678236CAE8400301978 /* PopularMovieTableViewCell.swift in Sources */,
@@ -522,6 +548,8 @@
 				8A151656236CA30100301978 /* Then.swift in Sources */,
 				8A87735E236F4D7B0090AE0B /* ReuqestProvider.swift in Sources */,
 				8A877360236F56EF0090AE0B /* NetworkService.swift in Sources */,
+				8A4771EF2371C7D9003D8F02 /* AuthorizationTableViewCell.swift in Sources */,
+				8A4771EC2371C7A5003D8F02 /* AuthorizationViewModel.swift in Sources */,
 				8A15164C236C9F3300301978 /* Strings.swift in Sources */,
 				8AC31C38237039F00038AF13 /* ParentTableViewCell.swift in Sources */,
 			);

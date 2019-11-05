@@ -24,6 +24,9 @@ internal enum Asset {
   internal static let mediumGreen = ColorAsset(name: "mediumGreen")
   internal static let mediumGreenOpacity = ColorAsset(name: "mediumGreenOpacity")
   internal static let white = ColorAsset(name: "white")
+  internal static let background = ImageAsset(name: "background")
+  internal static let favoriteOff = ImageAsset(name: "favoriteOff")
+  internal static let favoriteOn = ImageAsset(name: "favoriteOn")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

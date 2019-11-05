@@ -27,11 +27,16 @@ final class PopularMovieTableViewCell: ParentTableViewCell {
         $0.contentMode = .scaleAspectFill
     }
 
+    private let favoriteButton = UIButton().thenUI {
+        $0.setImage(Asset.favoriteOff.image, for: .normal)
+    }
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configureContainerView()
         configureIconImageView()
         configureRatingView()
+        configureFavoriteButton()
     }
 
     required init?(coder: NSCoder) {
@@ -60,5 +65,15 @@ final class PopularMovieTableViewCell: ParentTableViewCell {
     private func configureRatingView() {
         containerView.addSubview(ratingView)
         ratingView.left(20).top(16).height(50).aspectRatio()
+    }
+
+    private func configureFavoriteButton() {
+        containerView.addSubview(favoriteButton)
+        favoriteButton.right(20).top(16).height(50).aspectRatio()
+
+        favoriteButton.addAction(for: .touchUpInside) {
+            guard let sender = $0 as? UIButton else { return }
+            sender.setImage(Asset.favoriteOn.image, for: .normal)
+        }
     }
 }
